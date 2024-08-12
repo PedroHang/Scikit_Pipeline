@@ -3568,3 +3568,893 @@ KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
 2024-08-12 16:35:46,914:INFO:_display_container: 2
 2024-08-12 16:35:46,914:INFO:DummyClassifier(constant=None, random_state=3609, strategy='prior')
 2024-08-12 16:35:46,914:INFO:compare_models() successfully completed......................................
+2024-08-12 16:47:54,024:INFO:Initializing create_model()
+2024-08-12 16:47:54,024:INFO:create_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, estimator=lightgbm, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, probability_threshold=None, experiment_custom_tags=None, verbose=True, system=True, add_to_model_list=True, metrics=None, display=None, model_only=True, return_train_score=False, error_score=0.0, kwargs={})
+2024-08-12 16:47:54,024:INFO:Checking exceptions
+2024-08-12 16:47:54,039:INFO:Importing libraries
+2024-08-12 16:47:54,039:INFO:Copying training dataset
+2024-08-12 16:47:54,091:INFO:Defining folds
+2024-08-12 16:47:54,091:INFO:Declaring metric variables
+2024-08-12 16:47:54,094:INFO:Importing untrained model
+2024-08-12 16:47:54,098:INFO:Light Gradient Boosting Machine Imported successfully
+2024-08-12 16:47:54,106:INFO:Starting cross validation
+2024-08-12 16:47:54,110:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
+2024-08-12 16:48:17,542:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:17,691:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:17,910:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:17,985:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,036:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,097:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,249:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,364:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,438:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,691:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py:196: FitFailedWarning: Metric 'make_scorer(roc_auc_score, response_method=('decision_function', 'predict_proba'), average=weighted, multi_class=ovr)' failed and error score 0.0 has been returned instead. If this is a custom metric, this usually means that the error is in the metric code. Full exception below:
+Traceback (most recent call last):
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\metrics.py", line 188, in _score
+    return super()._score(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 345, in _score
+    y_pred = method_caller(
+             ^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py", line 87, in _cached_call
+    result, _ = _get_response_values(
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_response.py", line 210, in _get_response_values
+    y_pred = prediction_method(X)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pipeline.py", line 341, in predict_proba
+    Xt = transform.transform(Xt)
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\sklearn\utils\_set_output.py", line 295, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\preprocess\transformers.py", line 248, in transform
+    args.append(X[self._include])
+                ~^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\frame.py", line 3899, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6115, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\Hanga\anaconda3\Lib\site-packages\pandas\core\indexes\base.py", line 6176, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['data_ref'], dtype='object')] are in the [columns]"
+
+  warnings.warn(
+
+2024-08-12 16:48:18,721:INFO:Calculating mean and std
+2024-08-12 16:48:18,723:INFO:Creating metrics dataframe
+2024-08-12 16:48:18,730:INFO:Finalizing model
+2024-08-12 16:48:21,548:INFO:[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+2024-08-12 16:48:21,549:INFO:[LightGBM] [Info] Number of positive: 96813, number of negative: 96813
+2024-08-12 16:48:21,597:INFO:[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.008604 seconds.
+2024-08-12 16:48:21,597:INFO:You can set `force_row_wise=true` to remove the overhead.
+2024-08-12 16:48:21,597:INFO:And if memory is not enough, you can set `force_col_wise=true`.
+2024-08-12 16:48:21,597:INFO:[LightGBM] [Info] Total Bins 6465
+2024-08-12 16:48:21,597:INFO:[LightGBM] [Info] Number of data points in the train set: 193626, number of used features: 32
+2024-08-12 16:48:21,598:INFO:[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+2024-08-12 16:48:22,118:INFO:Uploading results into container
+2024-08-12 16:48:22,119:INFO:Uploading model into container now
+2024-08-12 16:48:22,135:INFO:_master_model_container: 15
+2024-08-12 16:48:22,135:INFO:_display_container: 3
+2024-08-12 16:48:22,136:INFO:LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=3609, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0)
+2024-08-12 16:48:22,136:INFO:create_model() successfully completed......................................
+2024-08-12 16:48:44,266:INFO:Initializing plot_model()
+2024-08-12 16:48:44,267:INFO:plot_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, estimator=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=3609, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), plot=auc, scale=1, save=False, fold=None, fit_kwargs=None, plot_kwargs=None, groups=None, feature_name=None, label=False, verbose=True, system=True, display=None, display_format=None)
+2024-08-12 16:48:44,267:INFO:Checking exceptions
+2024-08-12 16:48:44,285:INFO:Preloading libraries
+2024-08-12 16:48:44,292:INFO:Copying training dataset
+2024-08-12 16:48:44,292:INFO:Plot type: auc
+2024-08-12 16:48:44,664:INFO:Fitting Model
+2024-08-12 16:48:44,671:INFO:Scoring test/hold-out set
+2024-08-12 16:48:45,049:INFO:Visual Rendered Successfully
+2024-08-12 16:48:45,146:INFO:plot_model() successfully completed......................................
+2024-08-12 16:50:51,218:INFO:Initializing get_config()
+2024-08-12 16:50:51,218:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=prep_pipe)
+2024-08-12 16:51:02,299:INFO:Initializing get_config()
+2024-08-12 16:51:02,299:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=prep_pipe)
+2024-08-12 16:51:18,839:INFO:Initializing get_config()
+2024-08-12 16:51:18,840:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=prep_pipe)
+2024-08-12 16:51:50,006:INFO:Initializing get_config()
+2024-08-12 16:51:50,006:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=prep_pipe)
+2024-08-12 16:53:57,267:INFO:Initializing get_config()
+2024-08-12 16:53:57,268:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=pipeline)
+2024-08-12 16:53:57,297:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2024-08-12 16:53:57,297:INFO:get_config() successfully completed......................................
+2024-08-12 16:58:36,734:INFO:Initializing get_config()
+2024-08-12 16:58:36,734:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=X_test)
+2024-08-12 16:58:36,735:INFO:Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+2024-08-12 16:58:36,735:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 16:58:36,750:INFO:Variable:  returned as          data_ref  index sexo posse_de_veiculo posse_de_imovel  qtd_filhos  \
+574607 2015-12-01   3754    F                N               S           0   
+196840 2015-04-01  14608    F                N               S           0   
+246665 2015-05-01   7203    F                N               S           0   
+377345 2015-08-01  14944    M                S               S           0   
+672113 2016-02-01  11051    M                S               S           0   
+...           ...    ...  ...              ...             ...         ...   
+588704 2015-12-01   8256    F                N               S           0   
+671987 2016-02-01   6145    F                N               S           2   
+496841 2015-10-01   4975    M                S               S           0   
+266885 2015-06-01   2049    F                N               S           0   
+326519 2015-07-01  12541    M                N               N           1   
+
+              tipo_renda             educacao estado_civil tipo_residencia  \
+574607       Pensionista                Médio        União            Casa   
+196840       Assalariado                Médio       Casado            Casa   
+246665        Empresário                Médio       Casado            Casa   
+377345  Servidor público    Superior completo       Casado            Casa   
+672113        Empresário                Médio       Casado            Casa   
+...                  ...                  ...          ...             ...   
+588704        Empresário                Médio       Casado            Casa   
+671987        Empresário                Médio     Solteiro            Casa   
+496841        Empresário                Médio       Casado         Aluguel   
+266885       Pensionista                Médio        Viúvo            Casa   
+326519       Assalariado  Superior incompleto       Casado         Aluguel   
+
+        idade  tempo_emprego  qt_pessoas_residencia         renda  
+574607     63            NaN                    2.0   6109.240234  
+196840     65       5.882192                    2.0  16983.109375  
+246665     54      12.550685                    2.0  38754.050781  
+377345     27       1.761644                    2.0  11197.250000  
+672113     49       9.523288                    2.0   1774.410034  
+...       ...            ...                    ...           ...  
+588704     43       7.556164                    2.0   7286.189941  
+671987     37       9.753425                    3.0   4125.520020  
+496841     46       5.550685                    2.0  12170.919922  
+266885     57            NaN                    1.0  16722.080078  
+326519     31       4.953424                    3.0  29620.839844  
+
+[45000 rows x 14 columns]
+2024-08-12 16:58:36,750:INFO:get_config() successfully completed......................................
+2024-08-12 16:58:36,750:INFO:Initializing get_config()
+2024-08-12 16:58:36,750:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=y_test)
+2024-08-12 16:58:36,750:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2024-08-12 16:58:36,750:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 16:58:36,760:INFO:Variable:  returned as 574607    False
+196840    False
+246665    False
+377345    False
+672113    False
+          ...  
+588704    False
+671987    False
+496841    False
+266885    False
+326519    False
+Name: mau, Length: 45000, dtype: bool
+2024-08-12 16:58:36,760:INFO:get_config() successfully completed......................................
+2024-08-12 17:00:05,717:INFO:Initializing get_config()
+2024-08-12 17:00:05,717:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=pipeline)
+2024-08-12 17:00:05,758:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2024-08-12 17:00:05,758:INFO:get_config() successfully completed......................................
+2024-08-12 17:00:05,909:INFO:Initializing get_config()
+2024-08-12 17:00:05,909:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=X_test)
+2024-08-12 17:00:05,909:INFO:Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+2024-08-12 17:00:05,909:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 17:00:05,928:INFO:Variable:  returned as          data_ref  index sexo posse_de_veiculo posse_de_imovel  qtd_filhos  \
+574607 2015-12-01   3754    F                N               S           0   
+196840 2015-04-01  14608    F                N               S           0   
+246665 2015-05-01   7203    F                N               S           0   
+377345 2015-08-01  14944    M                S               S           0   
+672113 2016-02-01  11051    M                S               S           0   
+...           ...    ...  ...              ...             ...         ...   
+588704 2015-12-01   8256    F                N               S           0   
+671987 2016-02-01   6145    F                N               S           2   
+496841 2015-10-01   4975    M                S               S           0   
+266885 2015-06-01   2049    F                N               S           0   
+326519 2015-07-01  12541    M                N               N           1   
+
+              tipo_renda             educacao estado_civil tipo_residencia  \
+574607       Pensionista                Médio        União            Casa   
+196840       Assalariado                Médio       Casado            Casa   
+246665        Empresário                Médio       Casado            Casa   
+377345  Servidor público    Superior completo       Casado            Casa   
+672113        Empresário                Médio       Casado            Casa   
+...                  ...                  ...          ...             ...   
+588704        Empresário                Médio       Casado            Casa   
+671987        Empresário                Médio     Solteiro            Casa   
+496841        Empresário                Médio       Casado         Aluguel   
+266885       Pensionista                Médio        Viúvo            Casa   
+326519       Assalariado  Superior incompleto       Casado         Aluguel   
+
+        idade  tempo_emprego  qt_pessoas_residencia         renda  
+574607     63            NaN                    2.0   6109.240234  
+196840     65       5.882192                    2.0  16983.109375  
+246665     54      12.550685                    2.0  38754.050781  
+377345     27       1.761644                    2.0  11197.250000  
+672113     49       9.523288                    2.0   1774.410034  
+...       ...            ...                    ...           ...  
+588704     43       7.556164                    2.0   7286.189941  
+671987     37       9.753425                    3.0   4125.520020  
+496841     46       5.550685                    2.0  12170.919922  
+266885     57            NaN                    1.0  16722.080078  
+326519     31       4.953424                    3.0  29620.839844  
+
+[45000 rows x 14 columns]
+2024-08-12 17:00:05,928:INFO:get_config() successfully completed......................................
+2024-08-12 17:00:05,928:INFO:Initializing get_config()
+2024-08-12 17:00:05,928:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=y_test)
+2024-08-12 17:00:05,928:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2024-08-12 17:00:05,928:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 17:00:05,936:INFO:Variable:  returned as 574607    False
+196840    False
+246665    False
+377345    False
+672113    False
+          ...  
+588704    False
+671987    False
+496841    False
+266885    False
+326519    False
+Name: mau, Length: 45000, dtype: bool
+2024-08-12 17:00:05,936:INFO:get_config() successfully completed......................................
+2024-08-12 17:00:09,326:INFO:Initializing get_config()
+2024-08-12 17:00:09,326:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=pipeline)
+2024-08-12 17:00:09,360:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2024-08-12 17:00:09,361:INFO:get_config() successfully completed......................................
+2024-08-12 17:00:09,474:INFO:Initializing get_config()
+2024-08-12 17:00:09,474:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=X_test)
+2024-08-12 17:00:09,474:INFO:Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+2024-08-12 17:00:09,474:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 17:00:09,491:INFO:Variable:  returned as          data_ref  index sexo posse_de_veiculo posse_de_imovel  qtd_filhos  \
+574607 2015-12-01   3754    F                N               S           0   
+196840 2015-04-01  14608    F                N               S           0   
+246665 2015-05-01   7203    F                N               S           0   
+377345 2015-08-01  14944    M                S               S           0   
+672113 2016-02-01  11051    M                S               S           0   
+...           ...    ...  ...              ...             ...         ...   
+588704 2015-12-01   8256    F                N               S           0   
+671987 2016-02-01   6145    F                N               S           2   
+496841 2015-10-01   4975    M                S               S           0   
+266885 2015-06-01   2049    F                N               S           0   
+326519 2015-07-01  12541    M                N               N           1   
+
+              tipo_renda             educacao estado_civil tipo_residencia  \
+574607       Pensionista                Médio        União            Casa   
+196840       Assalariado                Médio       Casado            Casa   
+246665        Empresário                Médio       Casado            Casa   
+377345  Servidor público    Superior completo       Casado            Casa   
+672113        Empresário                Médio       Casado            Casa   
+...                  ...                  ...          ...             ...   
+588704        Empresário                Médio       Casado            Casa   
+671987        Empresário                Médio     Solteiro            Casa   
+496841        Empresário                Médio       Casado         Aluguel   
+266885       Pensionista                Médio        Viúvo            Casa   
+326519       Assalariado  Superior incompleto       Casado         Aluguel   
+
+        idade  tempo_emprego  qt_pessoas_residencia         renda  
+574607     63            NaN                    2.0   6109.240234  
+196840     65       5.882192                    2.0  16983.109375  
+246665     54      12.550685                    2.0  38754.050781  
+377345     27       1.761644                    2.0  11197.250000  
+672113     49       9.523288                    2.0   1774.410034  
+...       ...            ...                    ...           ...  
+588704     43       7.556164                    2.0   7286.189941  
+671987     37       9.753425                    3.0   4125.520020  
+496841     46       5.550685                    2.0  12170.919922  
+266885     57            NaN                    1.0  16722.080078  
+326519     31       4.953424                    3.0  29620.839844  
+
+[45000 rows x 14 columns]
+2024-08-12 17:00:09,491:INFO:get_config() successfully completed......................................
+2024-08-12 17:00:09,491:INFO:Initializing get_config()
+2024-08-12 17:00:09,491:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=y_test)
+2024-08-12 17:00:09,492:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2024-08-12 17:00:09,492:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 17:00:09,499:INFO:Variable:  returned as 574607    False
+196840    False
+246665    False
+377345    False
+672113    False
+          ...  
+588704    False
+671987    False
+496841    False
+266885    False
+326519    False
+Name: mau, Length: 45000, dtype: bool
+2024-08-12 17:00:09,499:INFO:get_config() successfully completed......................................
+2024-08-12 17:02:19,465:INFO:Initializing get_config()
+2024-08-12 17:02:19,465:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=X_test)
+2024-08-12 17:02:19,465:INFO:Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+2024-08-12 17:02:19,466:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'X_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'X_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 17:02:19,481:INFO:Variable:  returned as          data_ref  index sexo posse_de_veiculo posse_de_imovel  qtd_filhos  \
+574607 2015-12-01   3754    F                N               S           0   
+196840 2015-04-01  14608    F                N               S           0   
+246665 2015-05-01   7203    F                N               S           0   
+377345 2015-08-01  14944    M                S               S           0   
+672113 2016-02-01  11051    M                S               S           0   
+...           ...    ...  ...              ...             ...         ...   
+588704 2015-12-01   8256    F                N               S           0   
+671987 2016-02-01   6145    F                N               S           2   
+496841 2015-10-01   4975    M                S               S           0   
+266885 2015-06-01   2049    F                N               S           0   
+326519 2015-07-01  12541    M                N               N           1   
+
+              tipo_renda             educacao estado_civil tipo_residencia  \
+574607       Pensionista                Médio        União            Casa   
+196840       Assalariado                Médio       Casado            Casa   
+246665        Empresário                Médio       Casado            Casa   
+377345  Servidor público    Superior completo       Casado            Casa   
+672113        Empresário                Médio       Casado            Casa   
+...                  ...                  ...          ...             ...   
+588704        Empresário                Médio       Casado            Casa   
+671987        Empresário                Médio     Solteiro            Casa   
+496841        Empresário                Médio       Casado         Aluguel   
+266885       Pensionista                Médio        Viúvo            Casa   
+326519       Assalariado  Superior incompleto       Casado         Aluguel   
+
+        idade  tempo_emprego  qt_pessoas_residencia         renda  
+574607     63            NaN                    2.0   6109.240234  
+196840     65       5.882192                    2.0  16983.109375  
+246665     54      12.550685                    2.0  38754.050781  
+377345     27       1.761644                    2.0  11197.250000  
+672113     49       9.523288                    2.0   1774.410034  
+...       ...            ...                    ...           ...  
+588704     43       7.556164                    2.0   7286.189941  
+671987     37       9.753425                    3.0   4125.520020  
+496841     46       5.550685                    2.0  12170.919922  
+266885     57            NaN                    1.0  16722.080078  
+326519     31       4.953424                    3.0  29620.839844  
+
+[45000 rows x 14 columns]
+2024-08-12 17:02:19,482:INFO:get_config() successfully completed......................................
+2024-08-12 17:02:19,482:INFO:Initializing get_config()
+2024-08-12 17:02:19,482:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=y_test)
+2024-08-12 17:02:19,482:INFO:Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+2024-08-12 17:02:19,482:WARNING:C:\Users\Hanga\anaconda3\Lib\site-packages\pycaret\internal\pycaret_experiment\pycaret_experiment.py:321: UserWarning: Variable: 'y_test' used to return the transformed values in PyCaret 2.x. From PyCaret 3.x, this will return the raw values. If you need the transformed values, call get_config with 'y_test_transformed' instead.
+  warnings.warn(msg)  # print on screen
+
+2024-08-12 17:02:19,489:INFO:Variable:  returned as 574607    False
+196840    False
+246665    False
+377345    False
+672113    False
+          ...  
+588704    False
+671987    False
+496841    False
+266885    False
+326519    False
+Name: mau, Length: 45000, dtype: bool
+2024-08-12 17:02:19,489:INFO:get_config() successfully completed......................................
+2024-08-12 17:03:36,088:INFO:Initializing get_config()
+2024-08-12 17:03:36,088:INFO:get_config(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, variable=pipeline)
+2024-08-12 17:03:36,120:INFO:Variable:  returned as Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False)
+2024-08-12 17:03:36,120:INFO:get_config() successfully completed......................................
+2024-08-12 17:03:36,642:INFO:Initializing predict_model()
+2024-08-12 17:03:36,643:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001FD995B11C0>)
+2024-08-12 17:03:36,643:INFO:Checking exceptions
+2024-08-12 17:03:36,643:INFO:Preloading libraries
+2024-08-12 17:03:36,645:INFO:Set up data.
+2024-08-12 17:03:36,652:INFO:Set up index.
+2024-08-12 17:03:59,973:INFO:Initializing predict_model()
+2024-08-12 17:03:59,973:INFO:predict_model(self=<pycaret.classification.oop.ClassificationExperiment object at 0x000001FD988A65D0>, estimator=Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False), probability_threshold=None, encoded_labels=False, raw_score=False, round=4, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001FD99E67D80>)
+2024-08-12 17:03:59,974:INFO:Checking exceptions
+2024-08-12 17:03:59,974:INFO:Preloading libraries
+2024-08-12 17:03:59,975:INFO:Set up data.
+2024-08-12 17:03:59,980:INFO:Set up index.
+2024-08-12 17:05:18,519:INFO:Initializing save_model()
+2024-08-12 17:05:18,520:INFO:save_model(model=LGBMClassifier(boosting_type='gbdt', class_weight=None, colsample_bytree=1.0,
+               importance_type='split', learning_rate=0.1, max_depth=-1,
+               min_child_samples=20, min_child_weight=0.001, min_split_gain=0.0,
+               n_estimators=100, n_jobs=-1, num_leaves=31, objective=None,
+               random_state=3609, reg_alpha=0.0, reg_lambda=0.0, subsample=1.0,
+               subsample_for_bin=200000, subsample_freq=0), model_name=LGBM model, prep_pipe_=Pipeline(memory=FastMemory(location=C:\Users\Hanga\AppData\Local\Temp\joblib),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pess...
+                ('transformation',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=QuantileTransformer(copy=True,
+                                                                    ignore_implicit_zeros=False,
+                                                                    n_quantiles=1000,
+                                                                    output_distribution='normal',
+                                                                    random_state=3609,
+                                                                    subsample=10000))),
+                ('normalize',
+                 TransformerWrapper(exclude=None, include=None,
+                                    transformer=StandardScaler(copy=True,
+                                                               with_mean=True,
+                                                               with_std=True)))],
+         verbose=False), verbose=True, use_case=MLUsecase.CLASSIFICATION, kwargs={})
+2024-08-12 17:05:18,520:INFO:Adding model into prep_pipe
+2024-08-12 17:05:18,538:INFO:LGBM model.pkl saved in current working directory
+2024-08-12 17:05:18,586:INFO:Pipeline(memory=Memory(location=None),
+         steps=[('date_feature_extractor',
+                 TransformerWrapper(exclude=None, include=['data_ref'],
+                                    transformer=ExtractDateTimeFeatures(features=['day',
+                                                                                  'month',
+                                                                                  'year']))),
+                ('numerical_imputer',
+                 TransformerWrapper(exclude=None,
+                                    include=['index', 'qtd_filhos', 'idade',
+                                             'tempo_emprego',
+                                             'qt_pessoas_residencia', 'renda'],
+                                    transformer=Sim...
+                 LGBMClassifier(boosting_type='gbdt', class_weight=None,
+                                colsample_bytree=1.0, importance_type='split',
+                                learning_rate=0.1, max_depth=-1,
+                                min_child_samples=20, min_child_weight=0.001,
+                                min_split_gain=0.0, n_estimators=100, n_jobs=-1,
+                                num_leaves=31, objective=None,
+                                random_state=3609, reg_alpha=0.0,
+                                reg_lambda=0.0, subsample=1.0,
+                                subsample_for_bin=200000, subsample_freq=0))],
+         verbose=False)
+2024-08-12 17:05:18,587:INFO:save_model() successfully completed......................................
+2024-08-12 17:05:44,985:INFO:Initializing load_model()
+2024-08-12 17:05:44,985:INFO:load_model(model_name=LGBM model, platform=None, authentication=None, verbose=True)
